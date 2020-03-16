@@ -1,1 +1,349 @@
 /* You can add global styles to this file, and also import other style files */
+/*------------------VARIABLES*/
+
+/*------------------STYLESHEETS*/
+body {
+    margin: 0;
+    font-family: "Arial";
+    font-size: 0.875rem;
+    font-weight: 400;
+    text-align: left;
+    background-color: rgba(240, 230, 190, 1.0);
+    /*background-image:var(--site-background-image);*/
+    line-height: 1.7;
+    color: rgba(0,0,0,.7);
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration:none;
+    font-weight:600;
+    color:inherit;
+}
+
+    a:hover {
+        color: white;
+    }
+
+.nbar-brand {
+    color: rgba(240, 230, 190, 1.0);
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.nbar-brand:hover {
+    color: white;
+}
+
+.nbar-link {
+    color: rgba(240, 230, 190, 1.0);
+    padding-left: 15px;
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor:pointer;
+}
+
+.nbar-link:hover {
+    color: white;
+}
+
+.nbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    background-color: #d08080;
+    padding: .5rem 1rem;
+    border-bottom-left-radius:15px;
+    border-bottom-right-radius:15px;
+    height:42px;
+}
+
+.nbar-collapse {
+    flex-basis: 100%;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    box-sizing: border-box;
+    display:none;
+}
+
+.pagetitle {
+    margin-top: 64px;
+    margin-bottom: 1em;
+}
+
+@media (max-width: 799.98px) {
+    .nbar-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    background-color: #d08080;
+}
+    .nbar-toggler{
+        display:block;
+    }
+
+}
+
+@media (min-width: 800px) {
+    .coll {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        border-radius: 15px;
+    }
+
+    .nbar-collapse {
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
+        display: flex !important;
+        flex-basis: auto;
+    }
+
+    .nbar-items {
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        margin-left: auto !important;
+        margin-top:auto;
+    }
+
+    .nbar-link {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    }
+
+    .nbar-toggler{
+        display:none;
+    }
+
+}
+
+
+.nbar-container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-pack: justify;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.navbar-toggler {
+    color: rgba(0,0,0,.5);
+    border-color: rgba(0,0,0,.1);
+    padding: 0.25rem 0.75rem;
+    font-size: 1.09375rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+
+button, [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+}
+
+.shadow {
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.55) !important;
+}
+
+.nbar-brand {
+    display: inline-block;
+    padding-top: 0.3359375rem;
+    padding-bottom: 0.3359375rem;
+    margin-right: 1rem;
+    font-size: 1.09375rem;
+    line-height: inherit;
+    white-space: nowrap;
+    font-size: 14pt;
+}
+
+/*.nbar-item {
+    background-color: white;
+}*/
+
+
+.nbar-toggler {
+    padding: 0.25rem 0.75rem;
+    font-size: 1.09375rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    color: rgba(0,0,0,.5);
+    border-color: rgba(0,0,0,0.1);
+}
+
+.collapse:matches(.show) {
+    display: block;
+}
+
+.collapse:not(.show) {
+    display: block;
+}
+
+.footr {
+    padding-top: 0px;
+    position: fixed;
+    bottom: 0;
+    z-index: 9;
+    width: 100%;
+    box-shadow:  0 -0.5rem 1rem rgba(0,0,0,0.55) !important;;
+    border-radius: 15px 15px 0px 0px;
+    background-color: #d08080;
+}
+
+.fcentre a {
+    text-align: center;
+    display: block;
+    width: 100%;
+    color: rgba(240, 230, 190, 1.0);
+    text-decoration: none;
+}
+
+.fcentre a:hover {
+    color: white;
+}
+
+
+.pHeader {
+    font-weight: 500;
+    font-size: 3em;
+    font-family:  Arial, serif;
+    letter-spacing: 0em;
+    line-height: 1.6em;
+    text-align: center;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.4);
+    color: #336600;
+}
+
+
+.pDesc {
+    font-size: 1.3em;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    color: #336600;
+}
+
+.fas.fa-feather {
+    font-size: 36px;
+}
+
+.bpContainer {
+    margin-bottom: 100px;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+pre {
+    display: block;
+    font-size:1.1em;
+    color: #202020;
+    background-color: #DDDDDD;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.appcontainer{
+    height: 80vh;
+    width: 90vw;
+    background-color: white;
+    margin: 10vh auto;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    display: grid;
+    grid-gap: 0px;
+        grid-template-columns: 240px 1fr;
+        grid-template-rows: 60px 1fr;
+        grid-template-areas:
+    "header  header "
+    "sidebar content"
+
+}
+
+.app-header{
+    grid-area: header;
+    background-color: #888888;
+    border: 1px #666666 solid;
+}
+
+.app-sidebar{
+    grid-area: sidebar;
+    background-color: #999999;
+    border: 1px #666666 solid;
+}
+
+.app-content{
+    grid-area: content;
+    background-color: rgb(233, 243, 243);
+    border: 3px #aaaaaa solid;
+}
