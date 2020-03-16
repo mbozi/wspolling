@@ -13,7 +13,6 @@
         grid-template-areas:
     "header  header "
     "sidebar content"
-
 }
 
 .app-header{

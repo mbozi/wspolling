@@ -8,7 +8,7 @@ import { PollingService } from '../shared/polling.service';
 })
 export class PollingComponent implements OnInit {
 
-  constructor(private service: PollingService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
