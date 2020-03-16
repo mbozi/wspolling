@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PollingService } from 'src/app/shared/polling.service';
 
 @Component({
   selector: 'app-pollster-list',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PollsterListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service:PollingService) { }
 
   ngOnInit(): void {
+    this.service.GetPollsters();
   }
 
 }

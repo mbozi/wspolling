@@ -1,1 +1,6 @@
-<p>pollster-list works!</p>
+  
+<ul class="heroes">
+    <li *ngFor="let pollster of ListPollsters">
+      <span class="badge">{{pollster.ID}}</span> {{pollster.name}}
+    </li>
+</ul>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PollingService } from '../shared/polling.service';
 
 @Component({
   selector: 'app-polling',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PollingComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: PollingService) { }
 
   ngOnInit(): void {
   }
