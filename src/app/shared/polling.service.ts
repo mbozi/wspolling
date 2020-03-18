@@ -12,7 +12,8 @@ export class PollingService {
   constructor(private http: HttpClient) { }
 
   GetPollsters(){
-    this.http.get(this.rootURL+'/pollster')
-    .toPromise().then(res => this.ListPollsters= res as Pollster[])
+    this.http.get(this.rootURL + '/pollster')
+        .toPromise()
+        .then( res => this.ListPollsters = res as Pollster[] )
   }
 }

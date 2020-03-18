@@ -8,13 +8,11 @@ import { Pollster } from 'src/app/shared/pollster.model';
   styleUrls: ['./pollster-list.component.css']
 })
 export class PollsterListComponent implements OnInit {
-    pw=6
-    pollsterlist:Pollster[]
-    constructor(private service: PollingService) { }
+
+    constructor(public service: PollingService) { }
 
   ngOnInit(): void {
      this.service.GetPollsters();
-     this.pollsterlist = this.service.ListPollsters
   }
 
 }
