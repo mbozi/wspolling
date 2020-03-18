@@ -1,0 +1,52 @@
+#poll_table td {
+    padding: 0px !important;
+    text-align: right;
+    font-size: 12px;
+}
+
+    #poll_table td.al {
+        text-align: left;
+    }
+
+#poll_table {
+    padding: 0px !important;
+    margin: 20px auto;
+    /*text-align: left;*/
+}
+
+    #poll_table th {
+        padding: 5px 0px !important;
+        text-align: right;
+        font-size: 12px;
+    }
+
+        #poll_table th.al {
+            text-align: left;
+        }
+
+.td_input {
+    border: none;
+    width: 100%;
+}
+
+td.t_fieldwork, td.t_pollster {
+}
+
+#poll_table td.t_fieldwork, td.t_pollster, td.t_res {
+    padding-left: 2px;
+    border-color: #929292;
+}
+
+
+.t_poll {
+    table-layout: fixed;
+    margin-top: 20px;
+}
+
+#poll_table .t_pollster {
+    width: 20%;
+}
+
+#poll_table .t_fieldwork {
+    width: 10%;
+}
