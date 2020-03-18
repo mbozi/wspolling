@@ -7,6 +7,7 @@ import { PollingComponent } from './polling/polling.component';
 import { PollsterListComponent } from './polling/pollster-list/pollster-list.component';
 import { PollListComponent } from './polling/poll-list/poll-list.component';
 import { PollingService } from './shared/polling.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PollingService } from './shared/polling.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [PollingService],
   bootstrap: [AppComponent]

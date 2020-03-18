@@ -1,7 +1,5 @@
-
-<ul class="heroes">
-    <li *ngFor="let pollster of service.ListPollsters">
-      <span class="badge">{{pollster.ID}}</span> {{pollster.pName}}
-    </li>
-</ul>
-
+<select [ngModel]="selectedPollsterMod" required>
+  <option *ngFor="let pollster of service.ListPollsters" [value]="pollster.ID">
+    {{pollster.pName}}
+  </option>
+</select>

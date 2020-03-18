@@ -1,1 +1,15 @@
-<p>poll-list works!</p>
+<table>
+    <tr *ngFor="let poll of service.ListPolls">
+        <td>{{poll.ID}}</td>
+        <td>{{poll.PollsterID}}</td>
+        <td>{{poll.Fieldwork}}</td>
+        <td>{{poll.CON}}</td>
+        <td>{{poll.LAB}}</td>
+        <td>{{poll.BRX}}</td>
+        <td>{{poll.SNP}}</td>
+        <td>{{poll.GRM}}</td>
+        <td>{{poll.PLC}}</td>
+        <td>{{poll.UKP}}</td>
+    </tr>
+</table>
+

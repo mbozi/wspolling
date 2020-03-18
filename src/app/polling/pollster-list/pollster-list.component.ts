@@ -8,11 +8,22 @@ import { Pollster } from 'src/app/shared/pollster.model';
   styleUrls: ['./pollster-list.component.css']
 })
 export class PollsterListComponent implements OnInit {
+  selectedPollster: Pollster;
 
-    constructor(public service: PollingService) { }
+  constructor(public service: PollingService) { }
 
   ngOnInit(): void {
      this.service.GetPollsters();
+  }
+
+
+
+  get selectedPollsterMod(){
+    return this.selectedPollster;
+  }
+
+  set selectedPollsterMod(value){
+    this.selectedPollster = value;
   }
 
 }
