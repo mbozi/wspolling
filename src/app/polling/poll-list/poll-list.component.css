@@ -16,20 +16,19 @@
 
     #poll_table th {
         padding: 5px 0px !important;
-        text-align: right;
+        text-align: center;
         font-size: 12px;
+        background-color: #6699CC;
+        color:#003366;
     }
 
         #poll_table th.al {
-            text-align: left;
+            text-align: center;
         }
 
 .td_input {
     border: none;
     width: 100%;
-}
-
-td.t_fieldwork, td.t_pollster {
 }
 
 #poll_table td.t_fieldwork, td.t_pollster, td.t_res {

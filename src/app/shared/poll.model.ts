@@ -1,6 +1,7 @@
 export class Poll {
     ID: number;
     PollsterID: number;
+    Pollster: string;
     Fieldwork: Date;
     CON: number;
     LAB: number;
