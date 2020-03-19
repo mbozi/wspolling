@@ -1,41 +1,24 @@
 <table id="poll_table" class="table t_poll">
     <colgroup>
-        <col span="2" style="text-align: left;">
+        <col span="1" style="text-align: left;width:100px;">
+        <col span="1" style="width:70px;">
         <col span="9" style="width:50px">
     </colgroup>
     <tr>
         <th class="al">Pollster</th>
         <th class="al">Date</th>
-        <th>
-            Con
-        </th>
-        <th>
-            Lab
-        </th>
-        <th>
-            LibD
-        </th>
-        <th>
-            Brx
-        </th>
-        <th>
-            Grn
-        </th>
-        <th>
-            SNP
-        </th>
-        <th>
-            PC
-        </th>
-        <th>
-            UKIP
-        </th>
-        <th>
-            Lead
-        </th>
-    <tr *ngFor="let poll of service.ListPolls">
+        <th>Con</th>
+        <th>Lab</th>
+        <th>LibD</th>
+        <th>Brx</th>
+        <th>Grn</th>
+        <th>SNP</th>
+        <th>PC</th>
+        <th>UKIP</th>
+        <th>Lead</th>
+    <tr *ngFor="let poll of service.ListPolls | PollFilter:service.FilterPollster">
         <td class="al">{{poll.Pollster}}</td>
-        <td class="al">{{poll.Fieldwork | date:'dd/MM/yyy'}}</td>
+        <td class="ar">{{poll.Fieldwork | date:'dd/MM/yyy'}}</td>
         <td>{{poll.CON}}%</td>
         <td>{{poll.LAB}}%</td>
         <td>{{poll.LDM}}%</td>

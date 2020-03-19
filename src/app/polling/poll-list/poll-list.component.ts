@@ -16,8 +16,6 @@ export class PollListComponent implements OnInit {
     this.service.GetPolls();
  }
 
-
-
  get selectedPollMod(){
    return this.selectedPoll;
  }

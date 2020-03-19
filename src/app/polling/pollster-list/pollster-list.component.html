@@ -1,5 +1,5 @@
-<select [ngModel]="selectedPollsterMod" required>
-  <option *ngFor="let pollster of service.ListPollsters" [value]="pollster.ID">
+<select [(ngModel)]="service.PollsterFilter"> 
+  <option *ngFor="let pollster of service.DropDownList" [ngValue]="pollster.ID">
     {{pollster.pName}}
   </option>
 </select>

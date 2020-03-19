@@ -7,22 +7,51 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class PollingService {
+  
   rootURL = "http://api.worksync.net/api"
-  SelectedPollster: Pollster
+
+  FilterPollster: number;
+
   ListPollsters: Pollster[];
+  DropDownList: Pollster[];
+  
   ListPolls: Poll[];
-  constructor(private http: HttpClient) { }
+  FilteredPolls: Poll[];
+  
+  constructor(private http: HttpClient) {
+    this.FilterPollster=0;
+   }
 
   GetPollsters(){
-    this.http.get(this.rootURL + '/pollster')
-        .toPromise()
-        .then( res => this.ListPollsters = res as Pollster[] )
+    let obs = this.http.get(this.rootURL + '/pollster');
+    obs.subscribe((res) => this.PollstersReceived(res))
+
   }
 
-  GetPolls(){
-    this.http.get(this.rootURL + '/poll')
-        .toPromise()
-        .then( res => this.ListPolls = res as Poll[] )
+  PollstersReceived(res){
+    this.ListPollsters = res as Pollster[];
+    this.DropDownList = this.ListPollsters;
+    this.DropDownList.unshift(new Pollster ({ID: 0, pName: 'All Pollsters'}));
   }
+  
+
+  GetPolls(){
+    let obs = this.http.get(this.rootURL + '/poll');
+    obs.subscribe((res) => this.PollsReceived(res))
+  }
+
+  PollsReceived(res){
+    this.ListPolls = res as Poll[];
+  }
+
+
+  get PollsterFilter(){
+    return this.FilterPollster
+  }
+
+  set PollsterFilter(value){
+    this.FilterPollster = value;
+  }
+
 
 }

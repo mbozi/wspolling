@@ -8,13 +8,15 @@ import { PollsterListComponent } from './polling/pollster-list/pollster-list.com
 import { PollListComponent } from './polling/poll-list/poll-list.component';
 import { PollingService } from './shared/polling.service';
 import { FormsModule } from '@angular/forms';
+import { PollFilterPipe } from './polling/poll-list/poll-filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     PollingComponent,
     PollsterListComponent,
-    PollListComponent
+    PollListComponent,
+    PollFilterPipe
   ],
   imports: [
     BrowserModule,
