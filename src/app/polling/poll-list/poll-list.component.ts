@@ -13,7 +13,7 @@ export class PollListComponent implements OnInit {
   constructor(public service: PollingService) { }
 
   ngOnInit(): void {
-    this.service.GetPolls();
+    
  }
 
  get selectedPollMod(){

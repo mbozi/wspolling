@@ -12,7 +12,7 @@ export class PollsterListComponent implements OnInit {
   constructor(public service: PollingService) { }
 
   ngOnInit(): void {
-     this.service.GetPollsters();
+     
   }
 
 }
