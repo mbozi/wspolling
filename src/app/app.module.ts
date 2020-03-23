@@ -12,7 +12,6 @@ import { PollFilterPipe } from './polling/poll-list/poll-filter.pipe';
 import { HomeComponent } from './home/home.component';
 import { GraphComponent } from './graph/graph.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
-import { SidebaComponent } from './shared/sideba/sideba.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +23,6 @@ import { SidebaComponent } from './shared/sideba/sideba.component';
     HomeComponent,
     GraphComponent,
     SidebarComponent,
-    SidebaComponent
   ],
   imports: [
     BrowserModule,
