@@ -1,50 +1,27 @@
-.appcontainer{
-    height: 80vh;
-    width: 90vw;
-    background-color: white;
-    margin: 10vh auto;
-    border-color: black;
-    border-width: 1px;
-    border-style: solid;
+
+.app-con-container{
     display: grid;
+    max-height: 100%;
     grid-gap: 0px;
-        grid-template-columns: 240px 1fr;
-        grid-template-rows: 60px 50px 1fr 50px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 1fr;
         grid-template-areas:
-    "header  header "
-    "sidebar conhead"
-    "sidebar content"
-    "footer footer"
+    "cheader"
+    "ccontent"
 }
 
-.app-header{
-    grid-area: header;
-    background-color: #999999;
-
-}
-
-.app-sidebar{
-    grid-area: sidebar;
-    background-color: #999999;
-
-}
-
-.app-content{
-    grid-area: content;
+.app-con-content{
+    grid-area: cheader;
     background-color: white;
-
     overflow: scroll;
+    height: 100%;
+    width: 100%;
 }
 
 .app-con-head{
-    grid-area: conhead;
+    grid-area: ccontent;
     background-color: white;
 }
 
-.app-footer{
-    grid-area: footer;
-    background-color: #999999;
 
-
-}
 

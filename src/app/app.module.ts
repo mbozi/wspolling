@@ -9,6 +9,10 @@ import { PollListComponent } from './polling/poll-list/poll-list.component';
 import { PollingService } from './shared/polling.service';
 import { FormsModule } from '@angular/forms';
 import { PollFilterPipe } from './polling/poll-list/poll-filter.pipe';
+import { HomeComponent } from './home/home.component';
+import { GraphComponent } from './graph/graph.component';
+import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import { SidebaComponent } from './shared/sideba/sideba.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { PollFilterPipe } from './polling/poll-list/poll-filter.pipe';
     PollingComponent,
     PollsterListComponent,
     PollListComponent,
-    PollFilterPipe
+    PollFilterPipe,
+    HomeComponent,
+    GraphComponent,
+    SidebarComponent,
+    SidebaComponent
   ],
   imports: [
     BrowserModule,

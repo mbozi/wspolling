@@ -1,0 +1,40 @@
+.appcontainer{
+    height: 80vh;
+    width: 90vw;
+    background-color: white;
+    margin: 10vh auto;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    display: grid;
+    grid-gap: 0px;
+        grid-template-columns: 240px 1fr;
+        grid-template-rows: 60px 50px 1fr 50px;
+        grid-template-areas:
+    "header  header "
+    "sidebar content"
+    "sidebar content"
+    "footer footer"
+}
+
+.app-header{
+    grid-area: header;
+    background-color: #999999;
+
+}
+
+.app-sidebar{
+    grid-area: sidebar;
+    background-color: #999999;
+
+}
+
+.app-footer{
+    grid-area: footer;
+    background-color: #999999;
+}
+
+.app-content{
+    grid-area: content;
+    overflow: hidden;
+}
