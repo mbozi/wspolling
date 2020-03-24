@@ -15,6 +15,7 @@ export class GraphComponent implements OnInit {
 
 
     var timeFormat = 'DD/MM/YYYY';
+    var ltension = 0.25
 
 /* CHART DATA */
 
@@ -23,7 +24,8 @@ export class GraphComponent implements OnInit {
       label: 'CON',
       data: this.service.ListPolls.map((val) => { return {  x: new Date(val.Fieldwork), y: val.CON }}),
       borderColor: 'blue',
-      fill: false
+      fill: false,
+      lineTension: ltension
     };
     
     var LABdata = {
@@ -31,6 +33,7 @@ export class GraphComponent implements OnInit {
       data: this.service.ListPolls.map((val) => { return {  x: new Date(val.Fieldwork), y: val.LAB }}),
       borderColor: 'red',
       fill: false,
+      lineTension: ltension
     };
 
     var BRXdata = {
@@ -38,6 +41,7 @@ export class GraphComponent implements OnInit {
       data: this.service.ListPolls.map((val) => { return {  x: new Date(val.Fieldwork), y: val.BRX }}),
       borderColor: 'black',
       fill: false,
+      lineTension: ltension
     };
 
     var LDMdata = {
@@ -45,6 +49,7 @@ export class GraphComponent implements OnInit {
       data: this.service.ListPolls.map((val) => { return {  x: new Date(val.Fieldwork), y: val.LDM }}),
       borderColor: 'orange',
       fill: false,
+      lineTension: ltension
     };
     
     var chartDATA = [CONdata, LABdata, BRXdata, LDMdata] ;
@@ -57,7 +62,7 @@ var chartOPTIONS = {
   responsive: true,
   title: {
     display: true,
-    text: 'Min and Max Settings'
+    text: 'UK Opinion Polls Approaching the 2019 General Election'
   },
 
   scales: {
@@ -67,7 +72,7 @@ var chartOPTIONS = {
     },
     scaleLabel: {
       display:     true,
-      labelString: 'value'
+      labelString: 'percentage'
   }
 
     }],
@@ -86,7 +91,7 @@ var chartOPTIONS = {
         },
         scaleLabel: {
           display:     true,
-          labelString: 'Date'
+          labelString: 'fieldwork'
       }
         
     }]
