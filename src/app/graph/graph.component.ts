@@ -15,14 +15,15 @@ export class GraphComponent implements OnInit {
 
 
     var timeFormat = 'DD/MM/YYYY';
-    var ltension = 0.25
+    var ltension = 0.25;
+    var fpolls = this.service.ListPolls 
 
 /* CHART DATA */
 
     var minDate = new Date('2017-01-01');
     var CONdata = {
       label: 'CON',
-      data: this.service.ListPolls.map((val) => { return {  x: new Date(val.Fieldwork), y: val.CON }}),
+      data: this.service.FilteredPolls.map((val) => { return {  x: new Date(val.Fieldwork), y: val.CON }}),
       borderColor: 'blue',
       fill: false,
       lineTension: ltension
@@ -30,7 +31,7 @@ export class GraphComponent implements OnInit {
     
     var LABdata = {
       label: 'LAB',
-      data: this.service.ListPolls.map((val) => { return {  x: new Date(val.Fieldwork), y: val.LAB }}),
+      data: this.service.FilteredPolls.map((val) => { return {  x: new Date(val.Fieldwork), y: val.LAB }}),
       borderColor: 'red',
       fill: false,
       lineTension: ltension
@@ -38,7 +39,7 @@ export class GraphComponent implements OnInit {
 
     var BRXdata = {
       label: 'BRX',
-      data: this.service.ListPolls.map((val) => { return {  x: new Date(val.Fieldwork), y: val.BRX }}),
+      data: this.service.FilteredPolls.map((val) => { return {  x: new Date(val.Fieldwork), y: val.BRX }}),
       borderColor: 'black',
       fill: false,
       lineTension: ltension
@@ -46,7 +47,7 @@ export class GraphComponent implements OnInit {
 
     var LDMdata = {
       label: 'LIB',
-      data: this.service.ListPolls.map((val) => { return {  x: new Date(val.Fieldwork), y: val.LDM }}),
+      data: this.service.FilteredPolls.map((val) => { return {  x: new Date(val.Fieldwork), y: val.LDM }}),
       borderColor: 'orange',
       fill: false,
       lineTension: ltension

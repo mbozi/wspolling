@@ -28,7 +28,7 @@ export class PollingService {
 
   }
 
-  PollstersReceived(res){
+  PollstersReceived(res: any){
     this.ListPollsters = res as Pollster[];
     this.DropDownList = this.ListPollsters;
     this.DropDownList.unshift(new Pollster ({ID: 0, pName: 'All Pollsters'}));
@@ -40,7 +40,7 @@ export class PollingService {
     obs.subscribe((res) => this.PollsReceived(res))
   }
 
-  PollsReceived(res){
+  PollsReceived(res: any){
     this.ListPolls = res as Poll[];
   }
 
