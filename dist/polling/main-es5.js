@@ -1,3 +1,13 @@
+function _possibleConstructorReturn(self, call) { if (call && (typeof call === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
@@ -709,6 +719,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _shared_material_material_module__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
     /*! ./shared/material/material.module */
     "./src/app/shared/material/material.module.ts");
+    /* harmony import */
+
+
+    var _angular_material_moment_adapter__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
+    /*! @angular/material-moment-adapter */
+    "./node_modules/@angular/material-moment-adapter/__ivy_ngcc__/fesm2015/material-moment-adapter.js");
 
     var AppModule = function AppModule() {
       _classCallCheck(this, AppModule);
@@ -723,13 +739,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         return new (t || AppModule)();
       },
       providers: [_shared_polling_service__WEBPACK_IMPORTED_MODULE_8__["PollingService"]],
-      imports: [[_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_14__["BrowserAnimationsModule"], _shared_material_material_module__WEBPACK_IMPORTED_MODULE_15__["MaterialModule"]]]
+      imports: [[_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_14__["BrowserAnimationsModule"], _shared_material_material_module__WEBPACK_IMPORTED_MODULE_15__["MaterialModule"], _angular_material_moment_adapter__WEBPACK_IMPORTED_MODULE_16__["MatMomentDateModule"]]]
     });
 
     (function () {
       (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppModule, {
         declarations: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"], _polling_polling_component__WEBPACK_IMPORTED_MODULE_5__["PollingComponent"], _shared_pollster_list_pollster_list_component__WEBPACK_IMPORTED_MODULE_6__["PollsterListComponent"], _polling_poll_list_poll_list_component__WEBPACK_IMPORTED_MODULE_7__["PollListComponent"], _shared_poll_filter_poll_filter_pipe__WEBPACK_IMPORTED_MODULE_10__["PollFilterPipe"], _home_home_component__WEBPACK_IMPORTED_MODULE_11__["HomeComponent"], _graph_graph_component__WEBPACK_IMPORTED_MODULE_12__["GraphComponent"], _shared_sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_13__["SidebarComponent"]],
-        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_14__["BrowserAnimationsModule"], _shared_material_material_module__WEBPACK_IMPORTED_MODULE_15__["MaterialModule"]]
+        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_14__["BrowserAnimationsModule"], _shared_material_material_module__WEBPACK_IMPORTED_MODULE_15__["MaterialModule"], _angular_material_moment_adapter__WEBPACK_IMPORTED_MODULE_16__["MatMomentDateModule"]]
       });
     })();
     /*@__PURE__*/
@@ -740,7 +756,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
         args: [{
           declarations: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"], _polling_polling_component__WEBPACK_IMPORTED_MODULE_5__["PollingComponent"], _shared_pollster_list_pollster_list_component__WEBPACK_IMPORTED_MODULE_6__["PollsterListComponent"], _polling_poll_list_poll_list_component__WEBPACK_IMPORTED_MODULE_7__["PollListComponent"], _shared_poll_filter_poll_filter_pipe__WEBPACK_IMPORTED_MODULE_10__["PollFilterPipe"], _home_home_component__WEBPACK_IMPORTED_MODULE_11__["HomeComponent"], _graph_graph_component__WEBPACK_IMPORTED_MODULE_12__["GraphComponent"], _shared_sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_13__["SidebarComponent"]],
-          imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_14__["BrowserAnimationsModule"], _shared_material_material_module__WEBPACK_IMPORTED_MODULE_15__["MaterialModule"]],
+          imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_14__["BrowserAnimationsModule"], _shared_material_material_module__WEBPACK_IMPORTED_MODULE_15__["MaterialModule"], _angular_material_moment_adapter__WEBPACK_IMPORTED_MODULE_16__["MatMomentDateModule"]],
           providers: [_shared_polling_service__WEBPACK_IMPORTED_MODULE_8__["PollingService"]],
           bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
         }]
@@ -1535,6 +1551,96 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
+  "./src/app/shared/format-datepicker/format-datepicker.ts":
+  /*!***************************************************************!*\
+    !*** ./src/app/shared/format-datepicker/format-datepicker.ts ***!
+    \***************************************************************/
+
+  /*! exports provided: AppDateAdapter, APP_DATE_FORMATS */
+
+  /***/
+  function srcAppSharedFormatDatepickerFormatDatepickerTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "AppDateAdapter", function () {
+      return AppDateAdapter;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "APP_DATE_FORMATS", function () {
+      return APP_DATE_FORMATS;
+    });
+    /* harmony import */
+
+
+    var _angular_material_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! @angular/material/core */
+    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
+
+    var AppDateAdapter =
+    /*#__PURE__*/
+    function (_angular_material_cor) {
+      _inherits(AppDateAdapter, _angular_material_cor);
+
+      function AppDateAdapter() {
+        _classCallCheck(this, AppDateAdapter);
+
+        return _possibleConstructorReturn(this, _getPrototypeOf(AppDateAdapter).apply(this, arguments));
+      }
+
+      _createClass(AppDateAdapter, [{
+        key: "format",
+        value: function format(date, displayFormat) {
+          if (displayFormat === 'input') {
+            var day = date.getDate().toString();
+            day = +day < 10 ? '0' + day : day;
+            var month = (date.getMonth() + 1).toString();
+            month = +month < 10 ? '0' + month : month;
+            var year = date.getFullYear();
+            return "".concat(day, "-").concat(month, "-").concat(year);
+          }
+
+          return date.toDateString();
+        }
+      }]);
+
+      return AppDateAdapter;
+    }(_angular_material_core__WEBPACK_IMPORTED_MODULE_0__["NativeDateAdapter"]);
+
+    var APP_DATE_FORMATS = {
+      parse: {
+        dateInput: {
+          month: 'short',
+          year: 'numeric',
+          day: 'numeric'
+        }
+      },
+      display: {
+        dateInput: 'input',
+        monthYearLabel: {
+          year: 'numeric',
+          month: 'numeric'
+        },
+        dateA11yLabel: {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        },
+        monthYearA11yLabel: {
+          year: 'numeric',
+          month: 'long'
+        }
+      }
+    };
+    /***/
+  },
+
+  /***/
   "./src/app/shared/material/material.module.ts":
   /*!****************************************************!*\
     !*** ./src/app/shared/material/material.module.ts ***!
@@ -1693,14 +1799,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
 
           if (StartDate) {
-            FilteredPolls.filter(function (poll) {
-              return poll.Fieldwork >= StartDate;
+            FilteredPolls = FilteredPolls.filter(function (poll) {
+              return new Date(poll.Fieldwork) >= new Date(StartDate);
             });
           }
 
           if (EndDate) {
-            FilteredPolls.filter(function (poll) {
-              return poll.Fieldwork <= EndDate;
+            FilteredPolls = FilteredPolls.filter(function (poll) {
+              return new Date(poll.Fieldwork) <= new Date(EndDate);
             });
           }
 
@@ -1902,74 +2008,57 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _angular_material_moment_adapter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/material-moment-adapter */
-    "./node_modules/@angular/material-moment-adapter/__ivy_ngcc__/fesm2015/material-moment-adapter.js");
-    /* harmony import */
-
-
-    var _angular_material_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    var _angular_material_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
     /*! @angular/material/core */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
     /* harmony import */
 
 
-    var moment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! moment */
-    "./node_modules/moment/moment.js");
+    var _format_datepicker_format_datepicker__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! ../format-datepicker/format-datepicker */
+    "./src/app/shared/format-datepicker/format-datepicker.ts");
     /* harmony import */
 
 
-    var moment__WEBPACK_IMPORTED_MODULE_3___default =
-    /*#__PURE__*/
-    __webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_3__);
-    /* harmony import */
-
-
-    var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! @angular/forms */
-    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
-    /* harmony import */
-
-
-    var src_app_shared_polling_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    var src_app_shared_polling_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! src/app/shared/polling.service */
     "./src/app/shared/polling.service.ts");
     /* harmony import */
 
 
-    var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! @angular/material/form-field */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
     /* harmony import */
 
 
-    var _angular_material_input__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    var _angular_material_input__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! @angular/material/input */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/input.js");
     /* harmony import */
 
 
-    var _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! @angular/forms */
+    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+    /* harmony import */
+
+
+    var _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
     /*! @angular/material/datepicker */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/datepicker.js");
     /* harmony import */
 
 
-    var _angular_material_Select__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+    var _angular_material_Select__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
     /*! @angular/material/Select */
     "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/select.js");
     /* harmony import */
 
 
-    var _angular_common__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+    var _angular_common__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js"); // Depending on whether rollup is used, moment needs to be imported differently.
-    // Since Moment.js doesn't have a default export, we normally need to import using the `* as`
-    // syntax. However, rollup creates a synthetic default module and we thus need to import it using
-    // the `default as` syntax.
-    // tslint:disable-next-line:no-duplicate-imports
-
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     function PollsterListComponent_mat_option_22_Template(rf, ctx) {
       if (rf & 1) {
@@ -1989,9 +2078,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](pollster_r5.pName);
       }
-    }
+    } //const moment = _rollupMoment 
 
-    var moment = moment__WEBPACK_IMPORTED_MODULE_3___default.a || moment__WEBPACK_IMPORTED_MODULE_3__;
 
     var PollsterListComponent =
     /*#__PURE__*/
@@ -2000,34 +2088,32 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, PollsterListComponent);
 
         this.service = service;
-        this.startdate = new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"](moment([2017, 0, 1]));
       }
 
       _createClass(PollsterListComponent, [{
         key: "ngOnInit",
-        value: function ngOnInit() {}
+        value: function ngOnInit() {
+          this.service.FilterStartDate = new Date(2019, 2, 13);
+          this.service.FilterEndDate = new Date(2019, 11, 13);
+        }
       }]);
 
       return PollsterListComponent;
     }();
 
     PollsterListComponent.ɵfac = function PollsterListComponent_Factory(t) {
-      return new (t || PollsterListComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_polling_service__WEBPACK_IMPORTED_MODULE_5__["PollingService"]));
+      return new (t || PollsterListComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_polling_service__WEBPACK_IMPORTED_MODULE_3__["PollingService"]));
     };
 
     PollsterListComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
       type: PollsterListComponent,
       selectors: [["app-pollster-list"]],
-      features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵProvidersFeature"]([// `MomentDateAdapter` and `MAT_MOMENT_DATE_FORMATS` can be automatically provided by importing
-      // `MatMomentDateModule` in your applications root module. We provide it at the component level
-      // here, due to limitations of our example generation script.
-      {
-        provide: _angular_material_core__WEBPACK_IMPORTED_MODULE_2__["DateAdapter"],
-        useClass: _angular_material_moment_adapter__WEBPACK_IMPORTED_MODULE_1__["MomentDateAdapter"],
-        deps: [_angular_material_core__WEBPACK_IMPORTED_MODULE_2__["MAT_DATE_LOCALE"]]
+      features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵProvidersFeature"]([{
+        provide: _angular_material_core__WEBPACK_IMPORTED_MODULE_1__["DateAdapter"],
+        useClass: _format_datepicker_format_datepicker__WEBPACK_IMPORTED_MODULE_2__["AppDateAdapter"]
       }, {
-        provide: _angular_material_core__WEBPACK_IMPORTED_MODULE_2__["MAT_DATE_FORMATS"],
-        useValue: _angular_material_moment_adapter__WEBPACK_IMPORTED_MODULE_1__["MAT_MOMENT_DATE_FORMATS"]
+        provide: _angular_material_core__WEBPACK_IMPORTED_MODULE_1__["MAT_DATE_FORMATS"],
+        useValue: _format_datepicker_format_datepicker__WEBPACK_IMPORTED_MODULE_2__["APP_DATE_FORMATS"]
       }])],
       decls: 23,
       vars: 8,
@@ -2145,7 +2231,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.service.DropDownList);
         }
       },
-      directives: [_angular_material_form_field__WEBPACK_IMPORTED_MODULE_6__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_6__["MatLabel"], _angular_material_input__WEBPACK_IMPORTED_MODULE_7__["MatInput"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["DefaultValueAccessor"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_8__["MatDatepickerInput"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgModel"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_8__["MatDatepickerToggle"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_6__["MatSuffix"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_8__["MatDatepicker"], _angular_material_Select__WEBPACK_IMPORTED_MODULE_9__["MatSelect"], _angular_common__WEBPACK_IMPORTED_MODULE_10__["NgForOf"], _angular_material_core__WEBPACK_IMPORTED_MODULE_2__["MatOption"]],
+      directives: [_angular_material_form_field__WEBPACK_IMPORTED_MODULE_4__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_4__["MatLabel"], _angular_material_input__WEBPACK_IMPORTED_MODULE_5__["MatInput"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__["DefaultValueAccessor"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_7__["MatDatepickerInput"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__["NgModel"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_7__["MatDatepickerToggle"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_4__["MatSuffix"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_7__["MatDatepicker"], _angular_material_Select__WEBPACK_IMPORTED_MODULE_8__["MatSelect"], _angular_common__WEBPACK_IMPORTED_MODULE_9__["NgForOf"], _angular_material_core__WEBPACK_IMPORTED_MODULE_1__["MatOption"]],
       styles: [".filter-container[_ngcontent-%COMP%]{\r\n  display:grid;\r\n  grid-template-columns: 1fr 230px 230px 230px 1fr;\r\n  grid-gap: 0px;\r\n  grid-template-areas:\r\n\"left start end pollster right \"\r\n}\r\n\r\n.filter-start[_ngcontent-%COMP%] {\r\n  grid-area: start;\r\n}\r\n\r\n.filter-end[_ngcontent-%COMP%] {\r\n  grid-area: end;\r\n}\r\n\r\n.filter-pollster[_ngcontent-%COMP%] {\r\n  grid-area: pollster;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hhcmVkL3BvbGxzdGVyLWxpc3QvcG9sbHN0ZXItbGlzdC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsWUFBWTtFQUNaLGdEQUFnRDtFQUNoRCxhQUFhO0VBQ2I7O0FBRUY7O0FBRUE7RUFDRSxnQkFBZ0I7QUFDbEI7O0FBRUE7RUFDRSxjQUFjO0FBQ2hCOztBQUVBO0VBQ0UsbUJBQW1CO0FBQ3JCIiwiZmlsZSI6InNyYy9hcHAvc2hhcmVkL3BvbGxzdGVyLWxpc3QvcG9sbHN0ZXItbGlzdC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmZpbHRlci1jb250YWluZXJ7XHJcbiAgZGlzcGxheTpncmlkO1xyXG4gIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMWZyIDIzMHB4IDIzMHB4IDIzMHB4IDFmcjtcclxuICBncmlkLWdhcDogMHB4O1xyXG4gIGdyaWQtdGVtcGxhdGUtYXJlYXM6XHJcblwibGVmdCBzdGFydCBlbmQgcG9sbHN0ZXIgcmlnaHQgXCJcclxufVxyXG5cclxuLmZpbHRlci1zdGFydCB7XHJcbiAgZ3JpZC1hcmVhOiBzdGFydDtcclxufVxyXG5cclxuLmZpbHRlci1lbmQge1xyXG4gIGdyaWQtYXJlYTogZW5kO1xyXG59XHJcblxyXG4uZmlsdGVyLXBvbGxzdGVyIHtcclxuICBncmlkLWFyZWE6IHBvbGxzdGVyO1xyXG59Il19 */"]
     });
     /*@__PURE__*/
@@ -2157,21 +2243,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           selector: 'app-pollster-list',
           templateUrl: './pollster-list.component.html',
           styleUrls: ['./pollster-list.component.css'],
-          providers: [// `MomentDateAdapter` and `MAT_MOMENT_DATE_FORMATS` can be automatically provided by importing
-          // `MatMomentDateModule` in your applications root module. We provide it at the component level
-          // here, due to limitations of our example generation script.
-          {
-            provide: _angular_material_core__WEBPACK_IMPORTED_MODULE_2__["DateAdapter"],
-            useClass: _angular_material_moment_adapter__WEBPACK_IMPORTED_MODULE_1__["MomentDateAdapter"],
-            deps: [_angular_material_core__WEBPACK_IMPORTED_MODULE_2__["MAT_DATE_LOCALE"]]
+          providers: [{
+            provide: _angular_material_core__WEBPACK_IMPORTED_MODULE_1__["DateAdapter"],
+            useClass: _format_datepicker_format_datepicker__WEBPACK_IMPORTED_MODULE_2__["AppDateAdapter"]
           }, {
-            provide: _angular_material_core__WEBPACK_IMPORTED_MODULE_2__["MAT_DATE_FORMATS"],
-            useValue: _angular_material_moment_adapter__WEBPACK_IMPORTED_MODULE_1__["MAT_MOMENT_DATE_FORMATS"]
+            provide: _angular_material_core__WEBPACK_IMPORTED_MODULE_1__["MAT_DATE_FORMATS"],
+            useValue: _format_datepicker_format_datepicker__WEBPACK_IMPORTED_MODULE_2__["APP_DATE_FORMATS"]
           }]
         }]
       }], function () {
         return [{
-          type: src_app_shared_polling_service__WEBPACK_IMPORTED_MODULE_5__["PollingService"]
+          type: src_app_shared_polling_service__WEBPACK_IMPORTED_MODULE_3__["PollingService"]
         }];
       }, null);
     })();
