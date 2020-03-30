@@ -16,7 +16,7 @@
         <th>PC</th>
         <th>UKIP</th>
         <th>Lead</th>
-    <tr *ngFor="let poll of service.ListPolls | PollFilter:service.FilterPollster">
+    <tr *ngFor="let poll of service.ListPolls | PollFilter : service.FilterPollster : service.FilterStartDate : service.FilterEndDate;">
         <td class="al">{{poll.Pollster}}</td>
         <td class="ar">{{poll.Fieldwork | date:'dd/MM/yyy'}}</td>
         <td>{{poll.CON}}%</td>

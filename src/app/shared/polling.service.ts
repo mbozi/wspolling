@@ -11,6 +11,8 @@ export class PollingService {
   rootURL = "http://api.worksync.net/api"
 
   FilterPollster: number;
+  FilterStartDate: Date;
+  FilterEndDate: Date;
 
   ListPollsters: Pollster[];
   DropDownList: Pollster[];
@@ -51,6 +53,22 @@ export class PollingService {
 
   set PollsterFilter(value){
     this.FilterPollster = value;
+  }
+
+  get StartDateFilter(){
+    return this.FilterStartDate
+  }
+
+  set StartDateFilter(value:any){
+    this.FilterStartDate = new Date(value);
+  }
+
+  get EndDateFilter(){
+    return this.FilterEndDate
+  }
+
+  set EndDateFilter(value:any){
+    this.FilterEndDate = new Date(value);
   }
 
 

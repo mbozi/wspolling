@@ -1,0 +1,40 @@
+<!--
+<select [(ngModel)]="service.PollsterFilter"> 
+  <option *ngFor="let pollster of service.DropDownList" [ngValue]="pollster.ID">
+    {{pollster.pName}}
+  </option>
+</select>
+-->
+<div class="filter-container">
+  <div class="filter-start">
+
+    <mat-form-field>
+      <mat-label>Start Date</mat-label>
+      <input  [(ngModel)]="service.StartDateFilter" matInput [matDatepicker]="sdate"  placeholder="date">
+      <mat-datepicker-toggle  matSuffix [for]="sdate"></mat-datepicker-toggle>
+      <mat-datepicker #sdate></mat-datepicker>
+    </mat-form-field>
+ 
+  </div>
+  <div class="filter-end">
+
+    <mat-form-field>
+      <mat-label>End Date</mat-label>
+      <input  [(ngModel)]="service.EndDateFilter" matInput [matDatepicker]="edate"  placeholder="date">
+      <mat-datepicker-toggle  matSuffix [for]="edate"></mat-datepicker-toggle>
+      <mat-datepicker #edate></mat-datepicker>
+    </mat-form-field>
+
+  </div>
+  <div class="filter-pollster">
+    <mat-form-field>
+      <mat-label>Pollster</mat-label>
+      <mat-select [(value)]="service.PollsterFilter">
+        <mat-option *ngFor="let pollster of service.DropDownList" [value]="pollster.ID">{{pollster.pName}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>
+
+
+

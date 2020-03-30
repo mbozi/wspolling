@@ -1,0 +1,19 @@
+.filter-container{
+  display:grid;
+  grid-template-columns: 1fr 230px 230px 230px 1fr;
+  grid-gap: 0px;
+  grid-template-areas:
+"left start end pollster right "
+}
+
+.filter-start {
+  grid-area: start;
+}
+
+.filter-end {
+  grid-area: end;
+}
+
+.filter-pollster {
+  grid-area: pollster;
+}
