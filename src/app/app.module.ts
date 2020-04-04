@@ -10,11 +10,12 @@ import { PollingService } from './shared/polling.service';
 import { FormsModule } from '@angular/forms';
 import { PollFilterPipe } from './shared/poll-filter/poll-filter.pipe';
 import { HomeComponent } from './home/home.component';
-import { GraphComponent } from './graph/graph.component';
+import { GraphComponent } from './charting/graph/graph.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material/material.module';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
+import { ChartingComponent } from './charting/charting.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MatMomentDateModule } from '@angular/material-moment-adapter';
     PollFilterPipe,
     HomeComponent,
     GraphComponent,
-    SidebarComponent
+    SidebarComponent,
+    ChartingComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,10 @@ import { MatMomentDateModule } from '@angular/material-moment-adapter';
     MaterialModule,
     MatMomentDateModule
   ],
-  providers: [PollingService],
+  providers: [
+    PollingService,
+    PollFilterPipe
+        ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,23 @@
+.app-con-container{
+    display: grid;
+    max-height: 100%;
+    grid-gap: 0px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 1fr;
+        grid-template-areas:
+    "cheader"
+    "ccontent"
+}
+
+.app-con-content{
+    grid-area: cheader;
+    background-color: white;
+    overflow: scroll;
+    height: 100%;
+    width: 100%;
+}
+
+.app-con-head{
+    grid-area: ccontent;
+    background-color: white;
+}

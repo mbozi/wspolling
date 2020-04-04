@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { PollingService } from '../shared/polling.service';
 
 @Component({
   selector: 'app-polling',

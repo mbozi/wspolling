@@ -1,0 +1,14 @@
+canvas {
+background-color: whitesmoke;
+max-height: 60vh;
+max-width: 60vw;
+margin: 10px auto;
+}
+
+.divChart{
+   height: 60vh;
+    width: 60vw;
+    display: block;
+    
+
+}

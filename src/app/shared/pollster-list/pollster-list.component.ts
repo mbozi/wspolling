@@ -25,8 +25,7 @@ export class PollsterListComponent implements OnInit {
   constructor(public service: PollingService) { }
 
   ngOnInit(): void {
-     this.service.FilterStartDate= new Date(2019,2,13)
-     this.service.FilterEndDate= new Date(2019,11,13)
+
   }
 
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PollingService } from '../shared/polling.service';
+import { ThrowStmt } from '@angular/compiler';
 
 @Component({
   selector: 'app-home',
@@ -11,8 +12,12 @@ export class HomeComponent implements OnInit {
   constructor(public service: PollingService) { }
 
   ngOnInit(): void {
-    this.service.GetPolls();
-    this.service.GetPollsters();
+    if (!this.service.ListPolls){
+      this.service.GetPolls();
+    }
+    if (!this.service.ListPollsters){
+      this.service.GetPollsters();
+    }
   }
 
 }
